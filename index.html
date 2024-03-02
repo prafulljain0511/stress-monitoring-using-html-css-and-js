@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Monitor</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="content">
+            <div class="chart-controls">
+                <select class="chart-mode" name="chart-mode">
+                    <option value="week" selected>Week</option>
+                    <option value="month">Month</option>
+                    <option value="year">Year</option>
+                    <option value="all">All</option>
+                </select>
+                <select class="chart-range range-year display-none" name="chart-range">
+                </select>
+                <input type="month" class="chart-range range-month display-none" name="chart-range">
+                <input type="week" class="chart-range range-week" name="chart-range">
+            </div>
+            <h2 class="chart-title">Weekly Stress</h2>
+            <div class="chart-container">
+                <div class="chart">
+                    <div class="bars-wrapper">
+                    </div>
+                    <div class="text-wrapper">
+                    </div>
+                </div>
+            </div>
+            <h2 class="no-data-message display-none">There is nothing to show yet. Use the button in the upper right corner of your screen to add data.</h2>
+        </section>
+        <div class="input-wrapper">
+            <div class="input-popup">
+                <form class="input-form">
+                    <div class="date">
+                        <input class="date-input" name="date" type="date" max="">
+                    </div>
+                    <div class="level">
+                        <select name="stressLevel">
+                            <option value="1">Very Low</option>
+                            <option value="2">Low</option>
+                            <option value="3">Medium</option>
+                            <option value="4">High</option>
+                            <option value="5">Very High</option>
+                        </select>
+                    </div>
+                    <button class="input-submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+        <button class="add-button">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </button>
+    </main>
+    <svg class="cloud1" width="542" height="264" viewBox="0 0 542 264" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="409.972" cy="132" r="132" fill="#E5E5E5"/>
+        <circle cx="102.953" cy="161.047" r="102.953" fill="#E5E5E5"/>
+        <circle cx="231.98" cy="105.98" r="88.9805" fill="#E5E5E5"/>
+        <rect x="102.217" y="146.34" width="308.123" height="117.66" fill="#E5E5E5"/>
+    </svg>
+    <svg class="cloud2" width="665" height="376" viewBox="0 0 665 376" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="528" cy="239" r="137" fill="#E5E5E5"/>
+        <circle cx="109" cy="267" r="109" fill="#E5E5E5"/>
+        <circle cx="231" cy="217" r="121" fill="#E5E5E5"/>
+        <circle cx="412" cy="162" r="162" fill="#E5E5E5"/>
+        <rect x="109" y="216" width="419" height="160" fill="#E5E5E5"/>
+    </svg>      
+    <script src="barChart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
